@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alley Cats Lawn Care</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .logo {
+            width: 150px; /* Adjust as needed */
+            height: auto;
+            margin: 20px auto;
+            display: block;
+        }
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+        nav a {
+            color: #4CAF50;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo-placeholder.png" alt="Alley Cats Lawn Care Logo" class="logo">
+        <h1>Alley Cats Lawn Care</h1>
+        <p>Your trusted partner for lawn maintenance</p>
+    </header>
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact Us</a>
+        <a href="https://example.com/book-quote" class="button">Book Free Quote</a>
+    </nav>
+    <div class="container" id="about">
+        <h2>About Us</h2>
+        <p>Welcome to Alley Cats Lawn Care, owned by Judah and Ahmed. We provide professional lawn care services including lawn mowing, weeding, mulching, and plant trimming. Whether you're a residential homeowner or a commercial property owner, we're here to keep your outdoor space looking its best.</p>
+    </div>
+    <div class="container" id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li><a href="#" onclick="showPopup('Lawn Mowing')">Lawn Mowing</a></li>
+            <li><a href="#" onclick="showPopup('Weeding')">Weeding</a></li>
+            <li><a href="#" onclick="showPopup('Mulching')">Mulching</a></li>
+            <li><a href="#" onclick="showPopup('Plant Trimming')">Plant Trimming</a></li>
+        </ul>
+    </div>
+    <div class="container" id="contact">
+        <h2>Contact Us</h2>
+        <p>If you're interested in our services, please don't hesitate to reach out:</p>
+        <p>Email: <a href="mailto:alleycatslawncare@gmail.com">alleycatslawncare@gmail.com</a></p>
+        <p>Phone: <a href="tel:720-788-1914">720-788-1914</a></p>
+    </div>
+    <footer>
+        &copy; 2024 Alley Cats Lawn Care
+    </footer>
+    
+    <div id="popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 9999;">
+        <div style="background-color: #fff; max-width: 400px; margin: 50px auto; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);">
+            <h2 id="popup-title"></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at lorem nec nunc viverra tincidunt.</p>
+            <button onclick="hidePopup()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function showPopup(service) {
+            document.getElementById('popup-title').innerText = 'Book ' + service;
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function hidePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
